@@ -8,13 +8,19 @@ function Navbar() {
         <nav>
           <ul className='flex flex-col items-center gap-3 text-white md:flex-row md:gap-8'>
             <li>
-              <a href='' className=' text-white text-xl'>Home</a>
+              <a href='' className=' text-white text-xl hover:underline transform'>Home</a>
             </li>
             <li>
-              <a href='' className='text-white text-xl'>HotelList</a>
+              <a href='' className='text-white text-xl hover:underline transform'>HotelList</a>
             </li>
             <li>
-              <a href='' className='text-white text-xl'>Services</a>
+              <a href='' className='text-white text-xl hover:underline transform'>Services</a>
+            </li>
+            <li>
+              <a href='' className='text-white text-xl hover:underline transform'>Contact</a>
+            </li>
+            <li>
+              <a href='' className='text-white text-xl hover:underline transform'>About</a>
             </li>
           </ul>
         </nav>
