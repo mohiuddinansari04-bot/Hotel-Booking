@@ -1,12 +1,15 @@
 import { useState } from "react";
-import Header from "./Component/Header";
+import Layout from "./Component/Layout";
+import Hero from "./Component/Hero/HeroSection";
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
-    <Header/>
+   <Layout/>
+   <Hero/>
+  
     </>
   );
 }
