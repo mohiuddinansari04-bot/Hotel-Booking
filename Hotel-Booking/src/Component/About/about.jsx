@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <section className="bg-white shadow-2xl py-20 w-full">
+    <section className="bg-white shadow-2xl py-20 w-full h-screen">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <div>
