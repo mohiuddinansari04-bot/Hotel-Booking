@@ -17,7 +17,7 @@ function Header() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-red-500 w-full sticky top-0 z-50 shadow-md">
+      <nav className="bg-red-500 w-full sticky py-4 top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -96,6 +96,7 @@ function Header() {
           )}
         </div>
       </nav>
+      
        </>
       )
       }
