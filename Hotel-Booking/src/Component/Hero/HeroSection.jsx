@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
-    <section className="relative h-screen">
-      <img  className="w-full h-screen" src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvbnMyMTEzNi1pbWFnZS1rd3Z5OWg0YS5qcGc.jpg" alt="" />
+
+    <section className="relative h-screen y-7xl">
+      <img  className="w-full h-screen object-cover" src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvbnMyMTEzNi1pbWFnZS1rd3Z5OWg0YS5qcGc.jpg" alt="Luxury hotel stay" />
   
       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
         <div className="text-center text-white">
@@ -14,9 +16,12 @@ function Hero() {
             Discover luxury hotels and amazing deals worldwide.
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-blue-600 rounded-lg">
+          <Link
+            to="/services"
+            className="mt-6 inline-block px-6 py-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700"
+          >
             Explore Hotels
-          </button>
+          </Link>
         </div>
       </div>
     </section>

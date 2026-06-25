@@ -1,15 +1,10 @@
 import { useState } from "react";
-import Layout from "./Component/Layout";
-import Hero from "./Component/Hero/HeroSection";
-
+import AppRouter from "./Component/Router/AppRouter";
 function App() {
-
-
   return (
     <>
-   <Layout/>
-   <Hero/>
-  
+    <AppRouter/>
+     
     </>
   );
 }
