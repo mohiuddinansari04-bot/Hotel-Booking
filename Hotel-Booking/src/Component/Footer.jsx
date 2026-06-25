@@ -34,7 +34,7 @@ function Footer() {
             <h4 className="text-lg font-semibold text-white mb-3">Contact</h4>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>support@mybooking.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>+91 98605695</li>
               <li>123 Hotel Street, City</li>
             </ul>
           </div>
