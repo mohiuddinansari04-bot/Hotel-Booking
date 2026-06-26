@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Deluxe Room",
+    "description": "A spacious room with a king bed, city views, and premium amenities.",
+    "price": 145,
+    "occupancy": "2 guests",
+    "amenities": ["Free Wi-Fi", "Breakfast included", "Air conditioning"]
+  },
+  {
+    "id": 2,
+    "name": "Executive Suite",
+    "description": "Includes a separate living area, work desk, and luxury bathroom.",
+    "price": 220,
+    "occupancy": "3 guests",
+    "amenities": ["Ocean view", "Complimentary minibar", "24/7 room service"]
+  },
+  {
+    "id": 3,
+    "name": "Family Room",
+    "description": "Perfect for families with extra space and twin bed options.",
+    "price": 185,
+    "occupancy": "4 guests",
+    "amenities": ["Child-friendly", "Extra bedding available", "Family activities"]
+  }
+]
