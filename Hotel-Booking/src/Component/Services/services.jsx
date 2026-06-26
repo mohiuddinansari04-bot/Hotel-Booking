@@ -48,23 +48,35 @@ function Services() {
         )}
 
         {!loading && !error && (
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {rooms.map((room) => (
-              <div key={room.id} className="rounded-3xl bg-white p-8 shadow-lg">
-                <div className="mb-4 flex items-center justify-between">
-                  <h2 className="text-2xl font-semibold text-slate-900">{room.name}</h2>
-                  <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
-                    ${room.price}/night
-                  </span>
+              <div
+                key={room.id}
+                className="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={room.image}
+                    alt={room.name}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
                 </div>
-                <p className="text-slate-600 mb-4">{room.description}</p>
-                <p className="text-slate-500 text-sm mb-4">Occupancy: {room.occupancy}</p>
-                <div className="space-y-2">
-                  {room.amenities.map((amenity, index) => (
-                    <p key={index} className="text-slate-600 text-sm">
-                      • {amenity}
-                    </p>
-                  ))}
+                <div className="p-6">
+                  <div className="mb-4 flex items-center justify-between gap-4">
+                    <h2 className="text-2xl font-semibold text-slate-900">{room.name}</h2>
+                    <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
+                      ${room.price}/night
+                    </span>
+                  </div>
+                  <p className="text-slate-600 mb-4 min-h-3rem">{room.description}</p>
+                  <p className="text-slate-500 text-sm font-medium mb-4">Occupancy: {room.occupancy}</p>
+                  <div className="space-y-2 border-t border-slate-100 pt-4">
+                    {room.amenities.map((amenity, index) => (
+                      <p key={index} className="text-slate-600 text-sm">
+                        • {amenity}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
