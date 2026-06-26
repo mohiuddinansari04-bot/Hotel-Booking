@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <section className="bg-white shadow-2xl py-20 w-full h-screen">
+    <section className="bg-white shadow-2xl py-20 w-full h-screen ">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <div>
@@ -38,17 +38,9 @@ function About() {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 mb-6">
-              <div className="rounded-3xl bg-white p-6 shadow-lg">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Premium Locations</h3>
-                <p className="text-slate-600 leading-7">Hand-picked hotels in top neighborhoods worldwide.</p>
-              </div>
+            
 
-              <div className="rounded-3xl bg-white p-6 shadow-lg">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Easy Booking</h3>
-                <p className="text-slate-600 leading-7">Fast reservations, secure payments, and flexible stays.</p>
-              </div>
-            </div>
+              
 
             <div className="flex flex-wrap gap-4 items-center">
               <a href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow">Contact Us</a>
