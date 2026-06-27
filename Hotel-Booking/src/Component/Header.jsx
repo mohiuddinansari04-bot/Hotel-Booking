@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <nav className="bg-red-500 w-full sticky top-0 z-50 shadow-md py-4">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-8xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           
           {/* Logo */}

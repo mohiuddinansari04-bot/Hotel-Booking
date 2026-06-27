@@ -26,7 +26,7 @@ function Services() {
 
   return (
     <section className="min-h-screen bg-slate-100 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-blue-600 font-semibold uppercase tracking-[0.3em] mb-2">Our Services</p>
           <h1 className="text-4xl font-bold text-slate-900">Hotel Rooms & Pricing</h1>
