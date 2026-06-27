@@ -1,53 +1,28 @@
-import React, { Children } from 'react'
-import { createContext,useEffect,useState } from 'react'
+import { createContext, useEffect, useState } from "react";
 
 export const AutoContext = createContext();
 
-function AutoProvider({Children}){
+function AutoProvider({ children }) {
+  const [user, setUser] = useState(null);
 
-  cosnt [user,setUser ] =useState(null);
-
-  useEffect(()=>{
-    const saveData = JSON.parse(
-      localStorage.getItem("user")
-    );
-    if(saveData){
-      setUser(saveUser);
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem("user") || "null");
+    if (savedData) {
+      setUser(savedData);
     }
-  },[]);
-}
-  const login =(name)=>{
-  const userData ={name};
+  }, []);
 
-  SetUser (userData);
-  localStorage.setItem(
-    "user",
-    JSON.stringify(userData)
-  )
-}
-
-// const logout =()=>{
-//   setUser(null);
-//   localStorage.removeItem("user");
-// }
-
-
-function AutoContext() {
-
+  const login = (name) => {
+    const userData = { name };
+    setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData));
+  };
 
   return (
-    <AuthContext.Provider
-      value={{
-        user,
-        login,
-      }}
-    >
+    <AutoContext.Provider value={{ user, login }}>
       {children}
-    </AuthContext.Provider>
+    </AutoContext.Provider>
   );
 }
 
-    
-  
-
-export default AutoContext
+export default AutoProvider;
