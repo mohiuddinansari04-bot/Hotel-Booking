@@ -4,6 +4,8 @@ function Services() {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [hoveredRoomId, setHoveredRoomId] = useState(null);
+  const [selectedRoomId, setSelectedRoomId] = useState(null);
 
   useEffect(() => {
     const fetchRooms = async () => {
@@ -49,37 +51,62 @@ function Services() {
 
         {!loading && !error && (
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {rooms.map((room) => (
-              <div
-                key={room.id}
-                className="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <div className="h-56 overflow-hidden">
-                  <img
-                    src={room.image}
-                    alt={room.name}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="mb-4 flex items-center justify-between gap-4">
-                    <h2 className="text-2xl font-semibold text-slate-900">{room.name}</h2>
-                    <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
-                      ${room.price}/night
-                    </span>
+            {rooms.map((room) => {
+              const isHovered = hoveredRoomId === room.id;
+              const isSelected = selectedRoomId === room.id;
+              const showDetails = isHovered || isSelected;
+
+              return (
+                <div
+                  key={room.id}
+                  className="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                  onMouseEnter={() => setHoveredRoomId(room.id)}
+                  onMouseLeave={() => setHoveredRoomId(null)}
+                  onClick={() => setSelectedRoomId(showDetails ? null : room.id)}
+                >
+                  <div className="h-56 overflow-hidden">
+                    <img
+                      src={room.image}
+                      alt={room.name}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <p className="text-slate-600 mb-4 min-h-3rem">{room.description}</p>
-                  <p className="text-slate-500 text-sm font-medium mb-4">Occupancy: {room.occupancy}</p>
-                  <div className="space-y-2 border-t border-slate-100 pt-4">
-                    {room.amenities.map((amenity, index) => (
-                      <p key={index} className="text-slate-600 text-sm">
-                        • {amenity}
-                      </p>
-                    ))}
+                  <div className="p-6">
+                    <div className="mb-4 flex items-center justify-between gap-4">
+                      <h2 className="text-2xl font-semibold text-slate-900">{room.name}</h2>
+                      <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
+                        ${room.price}/night
+                      </span>
+                    </div>
+                    <p className="text-slate-600 mb-4 min-h-3rem">{room.description}</p>
+                    <p className="text-slate-500 text-sm font-medium mb-4">Occupancy: {room.occupancy}</p>
+
+                    <button
+                      type="button"
+                      className="mb-4 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedRoomId(isSelected ? null : room.id);
+                      }}
+                    >
+                      {isSelected ? "Hide Details" : "Show Details"}
+                    </button>
+
+                    <div
+                      className={`space-y-2 border-t border-slate-100 pt-4 transition-all duration-300 ${
+                        showDetails ? "max-h-60 opacity-100" : "max-h-0 overflow-hidden opacity-0"
+                      }`}
+                    >
+                      {room.amenities.map((amenity, index) => (
+                        <p key={index} className="text-slate-600 text-sm">
+                          • {amenity}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

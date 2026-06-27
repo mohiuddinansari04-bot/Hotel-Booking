@@ -14,7 +14,7 @@
     "description": "Includes a separate living area, work desk, and luxury bathroom.",
     "price": 220,
     "occupancy": "3 guests",
-    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
     "amenities": ["Ocean view", "Complimentary minibar", "24/7 room service"]
   },
   {
@@ -23,7 +23,7 @@
     "description": "Perfect for families with extra space and twin bed options.",
     "price": 185,
     "occupancy": "4 guests",
-    "image": "https://images.unsplash.com/photo-1576675781144-0c01a1c7efca?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
     "amenities": ["Child-friendly", "Extra bedding available", "Family activities"]
   },
   {
@@ -32,7 +32,7 @@
     "description": "A bright suite with a cozy seating area and modern decor.",
     "price": 175,
     "occupancy": "2 guests",
-    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
     "amenities": ["King bed", "Smart TV", "Mini bar"]
   },
   {

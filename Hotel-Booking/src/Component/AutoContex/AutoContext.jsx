@@ -26,10 +26,10 @@ function AutoProvider({Children}){
   )
 }
 
-const logout =()=>{
-  setUser(null);
-  localStorage.removeItem("user");
-}
+// const logout =()=>{
+//   setUser(null);
+//   localStorage.removeItem("user");
+// }
 
 
 function AutoContext() {
@@ -40,7 +40,6 @@ function AutoContext() {
       value={{
         user,
         login,
-        logout,
       }}
     >
       {children}
