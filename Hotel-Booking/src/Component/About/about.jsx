@@ -2,7 +2,8 @@ import React from 'react'
 
 function About() {
   return (
-    <section className="bg-white shadow-2xl py-20 w-full h-screen ">
+      // all about section
+    <section className="bg-white shadow-2xl py-20 w-full h-screen  ">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <div>
@@ -37,17 +38,13 @@ function About() {
                 </ul>
               </div>
             </div>
-
-            
-
-              
-
+          {/* ///btn that direct to contact  */}
             <div className="flex flex-wrap gap-4 items-center">
               <a href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow">Contact Us</a>
-              <a href="#" className="px-6 py-3 border border-slate-200 rounded-lg">Explore Offers</a>
+              <a href="/services" className="px-6 py-3 border border-slate-200 rounded-lg hover:bg-green-400 hover:text-white ">Explore Offers & Services</a>
             </div>
           </div>
-
+           {/* image dive */}
           <div>
             <div className="grid gap-4">
               <img
