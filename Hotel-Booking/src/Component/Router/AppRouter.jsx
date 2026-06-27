@@ -5,7 +5,6 @@ import Home from "../Home/home";
 import About from "../About/about";
 import Contact from "../Contact/contact";
 import Services from "../Services/services";
-import Login from "../Login/Login";
 
 function AppRouter() {
   return (
@@ -15,7 +14,7 @@ function AppRouter() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Login/> }/>
+        {/* <Route path="login" element={<Login/> }/> */}
       </Route>
     </Routes>
   );
