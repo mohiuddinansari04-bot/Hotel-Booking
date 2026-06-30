@@ -27,7 +27,7 @@ function Hero() {
     <section className="relative h-screen y-7xl">
       <img  className="w-full h-screen object-cover" src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvbnMyMTEzNi1pbWFnZS1rd3Z5OWg0YS5qcGc.jpg" alt="Luxury hotel stay" />
   
-      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black/50 flex items-center justify-center fade-in">
         <div className="text-center text-white">
           <h1 className="text-5xl font-bold">
           {displayText}
