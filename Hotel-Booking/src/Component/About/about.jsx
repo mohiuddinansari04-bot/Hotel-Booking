@@ -1,24 +1,6 @@
 import React from "react";
 
 function About() {
-  const text = "     Welcome to Your Dream Hotel Experience";
-  
-    const [displayText, setDisplayText] = useState("");
-  
-    useEffect(() => {
-      let index = 0;
-  
-      const interval = setInterval(() => {
-        setDisplayText(text.slice(0, index + 1));
-        index++;
-  
-        if (index === text.length) {
-          clearInterval(interval);
-        }
-      }, 100);
-  
-      return () => clearInterval(interval);
-    }, [20]);
   return (
     // all about section
     <section className="bg-white  py-20 w-full h-screen mb-10 ">
@@ -30,7 +12,7 @@ function About() {
             </p>
 
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            {displayText}
+              Welcome to Your Dream Hotel Experience
             </h2>
 
             <p className="text-slate-700 leading-8 mb-6">
