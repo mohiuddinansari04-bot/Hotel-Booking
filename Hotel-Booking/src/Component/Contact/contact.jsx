@@ -1,5 +1,10 @@
 import React from "react";
-import { FaMapMarkerAlt,FaPhoneAlt,FaEnvelope,FaClock,} from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 
 function Contact() {
   return (
@@ -30,7 +35,6 @@ function Contact() {
             </h2>
 
             <form className="space-y-5">
-            
               <input
                 type="text"
                 placeholder="Full Name"
@@ -55,7 +59,10 @@ function Contact() {
                 className="w-full border rounded-xl px-5 py-3 outline-none resize-none focus:border-blue-600"
               ></textarea>
 
-              <button className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-3 rounded-xl font-semibold">
+              <button
+                type="button"
+                className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-3 rounded-xl font-semibold"
+              >
                 Send Message
               </button>
             </form>
