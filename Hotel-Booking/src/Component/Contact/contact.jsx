@@ -7,6 +7,16 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page refresh
+
+    alert("Message sent successfully!");
+
+    // Clear the form
+    e.target.reset();
+  };
+
   return (
     <section className="bg-slate-100 min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-5">
@@ -28,39 +38,42 @@ function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-
           <div className="bg-white rounded-3xl shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6 text-slate-900">
               Send Us a Message
             </h2>
 
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full border rounded-xl px-5 py-3 outline-none focus:border-blue-600"
+                required
+                className="w-full border rounded-xl px-5 py-3 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
               />
 
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full border rounded-xl px-5 py-3 outline-none focus:border-blue-600"
+                required
+                className="w-full border rounded-xl px-5 py-3 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
               />
 
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full border rounded-xl px-5 py-3 outline-none focus:border-blue-600"
+                required
+                className="w-full border rounded-xl px-5 py-3 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
               />
 
               <textarea
                 rows="6"
                 placeholder="Write your message..."
-                className="w-full border rounded-xl px-5 py-3 outline-none resize-none focus:border-blue-600"
+                required
+                className="w-full border rounded-xl px-5 py-3 outline-none resize-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
               ></textarea>
 
               <button
-                type="button"
+                type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-3 rounded-xl font-semibold"
               >
                 Send Message
@@ -69,9 +82,8 @@ function Contact() {
           </div>
 
           {/* Contact Information */}
-
           <div className="space-y-6">
-            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center">
+            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center hover:shadow-xl transition duration-300">
               <div className="bg-blue-100 p-4 rounded-full">
                 <FaMapMarkerAlt className="text-blue-600 text-2xl" />
               </div>
@@ -85,7 +97,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center">
+            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center hover:shadow-xl transition duration-300">
               <div className="bg-green-100 p-4 rounded-full">
                 <FaPhoneAlt className="text-green-600 text-2xl" />
               </div>
@@ -93,11 +105,16 @@ function Contact() {
               <div>
                 <h3 className="font-bold text-xl">Phone</h3>
 
-                <p className="text-slate-600 mt-2">+91 98765 43210</p>
+                <a
+                  href="tel:+919876543210"
+                  className="text-slate-600 mt-2 hover:text-blue-600"
+                >
+                  +91 98765 43210
+                </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center">
+            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center hover:shadow-xl transition duration-300">
               <div className="bg-red-100 p-4 rounded-full">
                 <FaEnvelope className="text-red-600 text-2xl" />
               </div>
@@ -105,11 +122,16 @@ function Contact() {
               <div>
                 <h3 className="font-bold text-xl">Email</h3>
 
-                <p className="text-slate-600 mt-2">support@luxenest.com</p>
+                <a
+                  href="mailto:support@luxenest.com"
+                  className="text-slate-600 mt-2 hover:text-blue-600"
+                >
+                  support@luxenest.com
+                </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center">
+            <div className="bg-white rounded-3xl shadow-lg p-6 flex gap-5 items-center hover:shadow-xl transition duration-300">
               <div className="bg-yellow-100 p-4 rounded-full">
                 <FaClock className="text-yellow-600 text-2xl" />
               </div>
